@@ -1,0 +1,5 @@
+<USER_RESPONSE>
+
+{user_response}
+
+</USER_RESPONSE>
