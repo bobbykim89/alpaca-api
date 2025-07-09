@@ -23,7 +23,7 @@ class HelloNameView(APIView):
         return Response(serializer.data)
 
 
-class CareerQuestionaireApiView(APIView):
+class CareerQuestionnaireApiView(APIView):
     def post(self, request):
         serializer = QuestionaireSubmissionSerializer(data=request.data)
         quiz = QuizClass()
