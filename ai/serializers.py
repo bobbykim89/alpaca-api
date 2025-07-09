@@ -1,10 +1,6 @@
 from rest_framework import serializers
 
 
-class HelloSerializer(serializers.Serializer):
-    message = serializers.CharField(read_only=True)
-
-
 class AnswerSerializer(serializers.Serializer):
     id = serializers.IntegerField()
     question = serializers.CharField()
