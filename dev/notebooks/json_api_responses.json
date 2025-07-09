@@ -1,0 +1,192 @@
+{
+"questions": [
+  {
+    "id": 1,
+    "question": "Where are you in your professional development?",
+    "options": [
+      "student",
+      "early-career professional",
+      "late career professional",
+      "lifelong learner"
+    ],
+    "multiple_answers": false
+  },
+  {
+    "id": 2,
+    "question": "What industries are you most interested in pursuing a career in?",
+    "options": [
+        "Technology",
+        "Healthcare",
+        "Education",
+        "Business",
+        "Creative Arts"
+    ],
+    "multiple_answers": true
+  },
+  {
+    "id": 3,
+    "question": "What skills do you feel most confident in?",
+    "options": [
+        "Analytical thinking",
+        "Communication",
+        "Technical skills",
+        "Creativity"
+    ],
+    "multiple_answers": true
+  },
+  {
+    "id": 4,
+    "question": "What motivates you the most in your career?",
+    "options": [
+        "Helping others",
+        "Innovation and creativity",
+        "Job stability",
+        "Career advancement"
+    ],
+    "multiple_answers": false
+  },
+  {
+    "id": 5,
+    "question": "What type of work environment do you prefer?",
+    "options": [
+        "Remote work",
+        "In-office work",
+        "Hybrid work"
+    ],
+    "multiple_answers": false
+  },
+  {
+    "id": 6,
+    "question": "What specific roles or job functions are you considering within the Technology and Education industries?",
+    "options": [
+        "Software Development",
+        "Data Analysis",
+        "Teaching",
+        "Instructional Design"
+    ],
+    "multiple_answers": true
+  },
+  {
+    "id": 7,
+    "question": "What are your long-term career goals?",
+    "options": [
+        "Become a leader in my field",
+        "Start my own business",
+        "Transition to a different industry",
+        "Specialize in a specific area"
+    ],
+    "multiple_answers": false
+  },
+  {
+    "id": 8,
+    "question": "What aspects of a job do you find most fulfilling?",
+    "options": [
+        "Working on innovative projects",
+        "Collaborating with a team",
+        "Learning new skills",
+        "Making a positive impact"
+    ],
+    "multiple_answers": true
+  },
+  {
+    "id": 9,
+    "question": "What kind of side projects or freelance work would you be interested in pursuing?",
+    "options": [
+        "Developing apps or websites",
+        "Tutoring or teaching online",
+        "Conducting research or analysis",
+        "Creative writing or content creation"
+    ],
+    "multiple_answers": true
+  },
+  {
+    "id": 10,
+    "question": "What type of company culture do you thrive in?",
+    "options": [
+        "Fast-paced and dynamic",
+        "Structured and stable",
+        "Collaborative and team-oriented",
+        "Innovative and experimental"
+    ],
+    "multiple_answers": false
+  }
+
+],
+"answers": [
+  {
+    "id": 1,
+    "question": "Where are you in your professional development?",
+    "selections": [
+    "early-career professional"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "What industries are you most interested in pursuing a career in?",
+    "selections": [
+    "Technology",
+    "Education"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "What skills do you feel most confident in?",
+    "selections": [
+    "Analytical thinking",
+    "Technical skills"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "What motivates you the most in your career?",
+    "selections": [
+    "Career advancement"
+    ]
+  },
+  {
+    "id": 5,
+    "question": "What type of work environment do you prefer?",
+    "selections": [
+    "Remote work"
+    ]
+  },
+  {
+    "id": 6,
+    "question": "What specific roles or job functions are you considering within the Technology and Education industries?",
+    "selections": [
+    "Software Development",
+    "Data Analysis"
+    ]
+  },
+  {
+    "id": 7,
+    "question": "What are your long-term career goals?",
+    "selections": [
+    "Become a leader in my field"
+    ]
+  },
+  {
+    "id": 8,
+    "question": "What aspects of a job do you find most fulfilling?",
+    "selections": [
+    "Working on innovative projects",
+    "Learning new skills",
+    "Making a positive impact"
+    ]
+  },
+  {
+    "id": 9,
+    "question": "What kind of side projects or freelance work would you be interested in pursuing?",
+    "selections": [
+    "Conducting research or analysis"
+    ]
+  },
+  {
+    "id": 10,
+    "question": "What type of company culture do you thrive in?",
+    "selections": [
+    "Innovative and experimental"
+    ]
+  }
+]
+}
