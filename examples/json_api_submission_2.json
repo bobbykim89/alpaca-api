@@ -1,0 +1,159 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Where are you in your professional development?",
+      "options": [
+        "student",
+        "early-career professional",
+        "late career professional",
+        "lifelong learner"
+      ],
+      "multiple_answers": false
+    },
+    {
+      "id": 2,
+      "question": "What are your main interests or passions?",
+      "options": [
+        "Technology",
+        "Arts and Humanities",
+        "Science and Research",
+        "Business and Finance",
+        "Social Impact"
+      ],
+      "multiple_answers": true
+    },
+    {
+      "id": 3,
+      "question": "What skills do you feel most confident in?",
+      "options": [
+        "Analytical thinking",
+        "Creative writing",
+        "Technical skills",
+        "Interpersonal communication"
+      ],
+      "multiple_answers": true
+    },
+    {
+      "id": 4,
+      "question": "What are your long-term career goals?",
+      "options": [
+        "Advancing in my current field",
+        "Switching to a new industry",
+        "Starting my own business",
+        "Working for a non-profit organization"
+      ],
+      "multiple_answers": false
+    },
+    {
+      "id": 5,
+      "question": "What type of work environment do you prefer?",
+      "options": [
+        "Remote work",
+        "In-office work",
+        "Hybrid work",
+        "Flexible work arrangements"
+      ],
+      "multiple_answers": false
+    },
+    {
+      "id": 6,
+      "question": "What motivates you the most in your career?",
+      "options": [
+        "Making a positive impact",
+        "Achieving personal growth",
+        "Financial stability",
+        "Gaining recognition and respect"
+      ],
+      "multiple_answers": false
+    },
+    {
+      "id": 7,
+      "question": "What kind of projects do you enjoy working on the most?",
+      "options": [
+        "Collaborative team projects",
+        "Independent research or analysis",
+        "Creative problem-solving",
+        "Technical development or programming"
+      ],
+      "multiple_answers": true
+    },
+    {
+      "id": 8,
+      "question": "Which industry or field are you most interested in pursuing a career in?",
+      "options": [
+        "Healthcare",
+        "Information Technology",
+        "Environmental Science",
+        "Engineering",
+        "Education"
+      ],
+      "multiple_answers": false
+    },
+    {
+      "id": 9,
+      "question": "What type of role are you most interested in pursuing?",
+      "options": [
+        "Research and Development",
+        "Software Development",
+        "Data Analysis",
+        "Project Management"
+      ],
+      "multiple_answers": false
+    }
+  ],
+  "answers": [
+    {
+      "id": 1,
+      "question": "Where are you in your professional development?",
+      "selections": ["early-career professional"]
+    },
+    {
+      "id": 2,
+      "question": "What are your main interests or passions?",
+      "selections": ["Technology", "Science and Research"]
+    },
+    {
+      "id": 3,
+      "question": "What skills do you feel most confident in?",
+      "selections": ["Analytical thinking", "Technical skills"]
+    },
+    {
+      "id": 4,
+      "question": "What are your long-term career goals?",
+      "selections": ["Advancing in my current field"]
+    },
+    {
+      "id": 5,
+      "question": "What type of work environment do you prefer?",
+      "selections": ["Remote work", "Hybrid work", "Flexible work arrangements"]
+    },
+    {
+      "id": 6,
+      "question": "What motivates you the most in your career?",
+      "selections": [
+        "Making a positive impact",
+        "Achieving personal growth",
+        "Financial stability"
+      ]
+    },
+    {
+      "id": 7,
+      "question": "What kind of projects do you enjoy working on the most?",
+      "selections": [
+        "Creative problem-solving",
+        "Technical development or programming"
+      ]
+    },
+    {
+      "id": 8,
+      "question": "Which industry or field are you most interested in pursuing a career in?",
+      "selections": ["Information Technology", "Engineering"]
+    },
+    {
+      "id": 9,
+      "question": "What type of role are you most interested in pursuing?",
+      "selections": ["Research and Development", "Software Development"]
+    }
+  ]
+}
