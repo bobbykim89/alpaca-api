@@ -1,0 +1,185 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Where are you in your professional development?",
+      "options": [
+        "student",
+        "early-career professional",
+        "late career professional",
+        "lifelong learner"
+      ],
+      "multiple_answers": false
+    },
+    {
+      "id": 2,
+      "question": "What are your main interests or passions?",
+      "options": [
+        "Technology",
+        "Art and Design",
+        "Health and Wellness",
+        "Business and Finance",
+        "Education",
+        "Social Impact"
+      ],
+      "multiple_answers": true
+    },
+    {
+      "id": 3,
+      "question": "What skills do you feel you excel in or enjoy using?",
+      "options": [
+        "Problem-solving",
+        "Creativity",
+        "Analytical thinking",
+        "Communication",
+        "Technical skills"
+      ],
+      "multiple_answers": true
+    },
+    {
+      "id": 4,
+      "question": "What are your career goals or motivations?",
+      "options": [
+        "To advance quickly in my career",
+        "To make a positive impact in my field",
+        "To achieve a work-life balance",
+        "To become a leader or expert in my area"
+      ],
+      "multiple_answers": false
+    },
+    {
+      "id": 5,
+      "question": "What type of work environment do you prefer?",
+      "options": [
+        "Remote work",
+        "In-office work",
+        "Hybrid work",
+        "Freelance or contract work"
+      ],
+      "multiple_answers": false
+    },
+    {
+      "id": 6,
+      "question": "What industries are you most interested in working in?",
+      "options": [
+        "Information Technology",
+        "Healthcare",
+        "Finance",
+        "Education",
+        "Creative Arts"
+      ],
+      "multiple_answers": true
+    },
+    {
+      "id": 7,
+      "question": "What kind of roles are you most interested in pursuing?",
+      "options": [
+        "Technical roles (e.g., developer, engineer)",
+        "Management roles (e.g., project manager, team lead)",
+        "Creative roles (e.g., designer, content creator)",
+        "Consultative roles (e.g., advisor, analyst)"
+      ],
+      "multiple_answers": true
+    },
+    {
+      "id": 8,
+      "question": "What specific technologies or tools are you most interested in working with?",
+      "options": [
+        "Programming languages (e.g., Python, Java)",
+        "Data analysis tools (e.g., Excel, SQL)",
+        "Web development frameworks (e.g., React, Angular)",
+        "Cloud computing platforms (e.g., AWS, Azure)"
+      ],
+      "multiple_answers": true
+    },
+    {
+      "id": 9,
+      "question": "What aspects of a job do you find most rewarding?",
+      "options": [
+        "Working on innovative projects",
+        "Collaborating with a team",
+        "Helping others or making a difference",
+        "Continuous learning and development"
+      ],
+      "multiple_answers": true
+    },
+    {
+      "id": 10,
+      "question": "What type of side gigs or freelance work would you be interested in pursuing?",
+      "options": [
+        "Freelance programming or development",
+        "Consulting in technology or education",
+        "Creating online courses or content",
+        "Building apps or software"
+      ],
+      "multiple_answers": true
+    }
+  ],
+  "answers": [
+    {
+      "id": 1,
+      "question": "Where are you in your professional development?",
+      "selections": ["early-career professional"]
+    },
+    {
+      "id": 2,
+      "question": "What are your main interests or passions?",
+      "selections": ["Technology"]
+    },
+    {
+      "id": 3,
+      "question": "What skills do you feel you excel in or enjoy using?",
+      "selections": ["Problem-solving", "Technical skills"]
+    },
+    {
+      "id": 4,
+      "question": "What are your career goals or motivations?",
+      "selections": [
+        "To achieve a work-life balance",
+        "To become a leader or expert in my area"
+      ]
+    },
+    {
+      "id": 5,
+      "question": "What type of work environment do you prefer?",
+      "selections": ["Remote work", "Hybrid work"]
+    },
+    {
+      "id": 6,
+      "question": "What industries are you most interested in working in?",
+      "selections": ["Information Technology", "Education"]
+    },
+    {
+      "id": 7,
+      "question": "What kind of roles are you most interested in pursuing?",
+      "selections": [
+        "Technical roles (e.g., developer, engineer)",
+        "Consultative roles (e.g., advisor, analyst)"
+      ]
+    },
+    {
+      "id": 8,
+      "question": "What specific technologies or tools are you most interested in working with?",
+      "selections": [
+        "Programming languages (e.g., Python, Java)",
+        "Web development frameworks (e.g., React, Angular)"
+      ]
+    },
+    {
+      "id": 9,
+      "question": "What aspects of a job do you find most rewarding?",
+      "selections": [
+        "Working on innovative projects",
+        "Continuous learning and development"
+      ]
+    },
+    {
+      "id": 10,
+      "question": "What type of side gigs or freelance work would you be interested in pursuing?",
+      "selections": [
+        "Consulting in technology or education",
+        "Building apps or software"
+      ]
+    }
+  ]
+}

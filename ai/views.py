@@ -41,7 +41,7 @@ class CareerQuestionnaireApiView(APIView):
             response = json.loads(raw_responze)
 
             # If the response includes a list of recommendations and reasoning
-            if "career_recommendation" in response and "reasoning" in response:
+            if "career_recommendations" in response and "reasoning" in response:
                 CareerQuizSubmissionModel.objects.create(
                     questions=career_quiz,
                     answers=user_response,
