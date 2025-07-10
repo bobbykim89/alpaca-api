@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from .models import CareerQuizSubmissionModel
 
 
 class AnswerSerializer(serializers.Serializer):
@@ -17,3 +18,11 @@ class QuestionSerializer(serializers.Serializer):
 class QuestionaireSubmissionSerializer(serializers.Serializer):
     questions = QuestionSerializer(many=True)
     answers = AnswerSerializer(many=True)
+
+
+class QuestionnaireLogModelSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = CareerQuizSubmissionModel
+        fields = ['submitted_at', 'questions',
+                  'answers', 'recommendations', 'reasoning']

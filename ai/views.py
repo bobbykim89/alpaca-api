@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
+from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
 from rest_framework import status
-from .serializers import QuestionaireSubmissionSerializer, QuestionSerializer
+from .serializers import QuestionaireSubmissionSerializer, QuestionSerializer, QuestionnaireLogModelSerializer
 from .models import CareerQuizSubmissionModel
 from lib.quiz import QuizClass
 import json
@@ -55,3 +56,8 @@ class CareerQuestionnaireApiView(APIView):
             }, status=status.HTTP_201_CREATED)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class LogListApiView(ListAPIView):
+    serializer_class = QuestionnaireLogModelSerializer
+    queryset = CareerQuizSubmissionModel.objects.all()

@@ -100,6 +100,17 @@
         "Project Management"
       ],
       "multiple_answers": false
+    },
+    {
+      "id": 10,
+      "question": "What kind of impact do you want to have through your work?",
+      "options": [
+        "Innovating new technologies",
+        "Improving processes and efficiency",
+        "Enhancing user experiences",
+        "Contributing to sustainable practices"
+      ],
+      "multiple_answers": false
     }
   ],
   "answers": [
@@ -154,6 +165,14 @@
       "id": 9,
       "question": "What type of role are you most interested in pursuing?",
       "selections": ["Research and Development", "Software Development"]
+    },
+    {
+      "id": 10,
+      "question": "What kind of impact do you want to have through your work?",
+      "selections": [
+        "Innovating new technologies",
+        "Improving processes and efficiency"
+      ]
     }
   ]
 }
