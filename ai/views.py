@@ -3,6 +3,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from .serializers import QuestionaireSubmissionSerializer, QuestionSerializer
+from .models import CareerQuizSubmissionModel
 from lib.quiz import QuizClass
 import json
 
@@ -38,6 +39,15 @@ class CareerQuestionnaireApiView(APIView):
             raw_responze = quiz.llm(
                 user_prompt=user_prompt, system_prompt=system_prompt)
             response = json.loads(raw_responze)
+
+            # If the response includes a list of recommendations and reasoning
+            if "career_recommendation" in response and "reasoning" in response:
+                CareerQuizSubmissionModel.objects.create(
+                    questions=career_quiz,
+                    answers=user_response,
+                    recommendations=response["career_recommendations"],
+                    reasoning=response["reasoning"]
+                )
 
             return Response({
                 "message": "Submission received",
