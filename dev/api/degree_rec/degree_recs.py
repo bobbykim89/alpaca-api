@@ -21,6 +21,7 @@ qdrant_client = QdrantClient(
 
 # LLM + Formatting utilities
 def llm(user_prompt, system_prompt, model="gpt-4o-mini", temperature=0.5):
+    """ llm function to call openAI with our specific prompts"""
     response = client.chat.completions.create(
         model=model,
         messages=[
@@ -32,6 +33,7 @@ def llm(user_prompt, system_prompt, model="gpt-4o-mini", temperature=0.5):
     return response.choices[0].message.content
 
 def load_prompts():
+    """load the txt files with the user//system prompts """
     with open("degrees_user_prompt.txt", "r") as f:
         user_prompt = f.read()
     with open("degrees_system_prompt.txt", "r") as f:
@@ -39,6 +41,7 @@ def load_prompts():
     return user_prompt, system_prompt
 
 def generate_user_profile(quiz_answers):
+    """ based on the json bit with the quiz answers, concatenate all into a string """
     user_profile = []
     for answer in quiz_answers:
         user_profile.append(answer["question"] + " " + ", ".join(answer["selections"]))
@@ -68,7 +71,7 @@ def search(selected_career,user_profile, limit=1,collection_name = "degree-infor
     return results
 
 def format_hits_response(hits):
-    # format the results into text to plug into chatGPT
+    """Format the results into text to plug into chatGPT"""
     recommended_degrees_data = []
     for hit in hits.points:
         degree_data = {}
@@ -87,7 +90,7 @@ def career_api(request):
     try:
         # obtain user quiz answers and career selection (only 1)
         data = json.loads(request.body)
-        career_selected = data.get("career_selected", [])
+        career_selected = data.get("career_selected", "")
         quiz_answers = data.get("degree_answers", [])
 
         #generate user profile
