@@ -77,9 +77,7 @@ def format_hits_response(hits):
         degree_data["degree_description"] = hit.payload['shortDescription']
         recommended_degrees_data.append(degree_data)
 
-        recommended_degrees = json.dumps(recommended_degrees_data,indent=2)
-
-    return recommended_degrees
+    return json.dumps(recommended_degrees_data,indent=2)
 
 @csrf_exempt
 def career_api(request):
