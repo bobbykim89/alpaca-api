@@ -12,3 +12,10 @@ class CareerQuizSubmissionModel(models.Model):
 
     def __str__(self):
         return f"Submission on {self.submitted_at}"
+
+
+class DegreeRecommendationSubmissionModel(models.Model):
+    selected_career = models.TextField()
+    answers = models.TextField()
+    recommendations = models.JSONField()
+    submitted_at = models.DateTimeField(auto_now_add=True)

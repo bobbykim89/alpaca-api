@@ -1,0 +1,65 @@
+{
+  "answers": [
+    {
+      "id": 1,
+      "question": "Where are you in your professional development?",
+      "selections": ["early-career professional"]
+    },
+    {
+      "id": 2,
+      "question": "What are your main interests or passions?",
+      "selections": ["Technology", "Science and Research"]
+    },
+    {
+      "id": 3,
+      "question": "What skills do you feel most confident in?",
+      "selections": ["Analytical thinking", "Technical skills"]
+    },
+    {
+      "id": 4,
+      "question": "What are your long-term career goals?",
+      "selections": ["Advancing in my current field"]
+    },
+    {
+      "id": 5,
+      "question": "What type of work environment do you prefer?",
+      "selections": ["Remote work", "Hybrid work", "Flexible work arrangements"]
+    },
+    {
+      "id": 6,
+      "question": "What motivates you the most in your career?",
+      "selections": [
+        "Making a positive impact",
+        "Achieving personal growth",
+        "Financial stability"
+      ]
+    },
+    {
+      "id": 7,
+      "question": "What kind of projects do you enjoy working on the most?",
+      "selections": [
+        "Creative problem-solving",
+        "Technical development or programming"
+      ]
+    },
+    {
+      "id": 8,
+      "question": "Which industry or field are you most interested in pursuing a career in?",
+      "selections": ["Information Technology", "Engineering"]
+    },
+    {
+      "id": 9,
+      "question": "What type of role are you most interested in pursuing?",
+      "selections": ["Research and Development", "Software Development"]
+    },
+    {
+      "id": 10,
+      "question": "What kind of impact do you want to have through your work?",
+      "selections": [
+        "Innovating new technologies",
+        "Improving processes and efficiency"
+      ]
+    }
+  ],
+  "selected_career": "Software Engineer"
+}
