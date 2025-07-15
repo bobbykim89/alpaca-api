@@ -13,6 +13,8 @@ class DegreeRecommendation:
     openai_client = OpenAI
     qd_client = QdrantClient
     prompt_path = Path
+    jina_url = str
+    jina_api_key = str
 
     def __init__(self):
         self.openai_client = OpenAI()
