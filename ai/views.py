@@ -82,23 +82,9 @@ class DegreeRecommendationApiView(APIView):
             career_selected = serializer.validated_data['selected_career']
             quiz_answers = serializer.validated_data['answers']
 
-            # generate user profile
-            user_profile = degree_recommendation.generate_user_profile(
-                quiz_answers=quiz_answers)
-
-            # get top 5 hits for degrees
-            hits = degree_recommendation.search(
-                selected_career=career_selected, user_profile=user_profile, limit=5)
-
-            # format data
-            recommended_degrees = degree_recommendation.format_hits_response(
-                hits=hits)
-
-            user_prompt, system_prompt = degree_recommendation.format_prompt(
-                career=career_selected, career_quiz=user_profile, degrees=recommended_degrees)
-            raw_response = degree_recommendation.llm(
-                user_prompt=user_prompt, system_prompt=system_prompt)
-            response = json.loads(raw_response)
+            # get career recommendation response and formatted quiz_answers
+            response, user_profile = degree_recommendation.recommend_degree_program(
+                selected_career=career_selected, quiz_answers=quiz_answers)
 
             DegreeRecommendationSubmissionModel.objects.create(
                 selected_career=career_selected,

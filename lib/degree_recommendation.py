@@ -139,3 +139,24 @@ class DegreeRecommendation:
             career_selection=career, career_quiz=career_quiz, degrees_data=degrees)
 
         return user_prompt, syetem_prompt
+
+    def recommend_degree_program(self, selected_career: str, quiz_answers: list) -> tuple[list, str]:
+
+        # generate user profile
+        user_profile = self.generate_user_profile(quiz_answers=quiz_answers)
+
+        # get top 5 hits for degrees
+        hits = self.search(selected_career=selected_career,
+                           user_profile=user_profile, limit=5)
+
+        # format data
+        recommended_degrees = self.format_hits_response(hits=hits)
+
+        user_prompt, system_prompt = self.format_prompt(
+            career=selected_career, career_quiz=user_profile, degrees=recommended_degrees)
+
+        raw_response = self.llm(
+            user_prompt=user_prompt, system_prompt=system_prompt)
+        response = json.loads(raw_response)
+
+        return response, user_profile
