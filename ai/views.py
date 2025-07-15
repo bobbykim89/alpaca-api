@@ -64,6 +64,16 @@ class CareerQuestionnaireLogListApiView(ListAPIView):
 
 
 class DegreeRecommendationApiView(APIView):
+    def get(self, request):
+        data = {
+            "selected_career": "selected career from quiz",
+            "answers": ["answers from quiz"]
+        }
+        return Response({
+            "message": "This route only support POST method.",
+            "data": data
+        }, status=status.HTTP_200_OK)
+
     def post(self, request):
         serializer = CareerRecommendationsRequestSerializer(data=request.data)
         degree_recommendation = DegreeRecommendation()

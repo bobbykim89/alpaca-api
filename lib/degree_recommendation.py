@@ -4,6 +4,7 @@ import os
 from openai import OpenAI
 from qdrant_client import QdrantClient, models
 from pathlib import Path
+import requests
 
 load_dotenv()
 
@@ -24,6 +25,30 @@ class DegreeRecommendation:
         current_file = Path(__file__).resolve()
         project_root = current_file.parent.parent
         self.prompt_path = project_root / "lib" / "assets" / "prompts"
+        self.jina_api_key = os.getenv("JINA_API_KEY")
+        self.jina_url = "https://api.jina.ai/v1/embeddings"
+
+    def get_jina_embedding(self, text):
+        headers = {
+            "Authorization": f"Bearer {self.jina_api_key}",
+            "Content-Type": "application/json"
+        }
+        data = {
+            "model": "jina-embeddings-v2-small-en",
+            "input": [text]
+        }
+        response = requests.post(
+            self.jina_url,
+            headers=headers,
+            json=data,
+            timeout=30
+        )
+        if response.status_code == 200:
+            result = response.json()
+            return result["data"][0]["embedding"]
+        else:
+            raise Exception(
+                f"Jina API error: {response.status_code} - {response.text}")
 
     def llm(self, user_prompt, system_prompt, model="gpt-4o-mini", temperature=0.5):
         """ llm function to call openAI with our specific prompts"""
@@ -57,21 +82,35 @@ class DegreeRecommendation:
 
     def search(self, selected_career: str, user_profile: str, limit: int = 1, collection_name="degree-information", model_handle="jinaai/jina-embeddings-v2-small-en"):
         """ This function is for searching amongst all the careers listed per degree"""
+        # results = self.qd_client.query_points(
+        #     collection_name=collection_name,
+        #     prefetch=[
+        #         models.Prefetch(
+        #             query=models.Document(
+        #                 text=selected_career, model=model_handle),
+        #             using="career_vector",
+        #             limit=20,
+        #         ),
+        #         models.Prefetch(
+        #             query=models.Document(
+        #                 text=user_profile, model=model_handle),
+        #             using="description_vector",
+        #             limit=20,
+        #         ),
+        #     ],
+        #     query=models.FusionQuery(fusion=models.Fusion.RRF),
+        #     limit=limit,
+        #     with_payload=True
+        # )
+        career_vector = self.get_jina_embedding(selected_career)
+        profile_vector = self.get_jina_embedding(user_profile)
         results = self.qd_client.query_points(
             collection_name=collection_name,
             prefetch=[
-                models.Prefetch(
-                    query=models.Document(
-                        text=selected_career, model=model_handle),
-                    using="career_vector",
-                    limit=20,
-                ),
-                models.Prefetch(
-                    query=models.Document(
-                        text=user_profile, model=model_handle),
-                    using="description_vector",
-                    limit=20,
-                ),
+                models.Prefetch(query=career_vector,
+                                using='career_vector', limit=20),
+                models.Prefetch(query=profile_vector,
+                                using='description_vector', limit=20)
             ],
             query=models.FusionQuery(fusion=models.Fusion.RRF),
             limit=limit,
