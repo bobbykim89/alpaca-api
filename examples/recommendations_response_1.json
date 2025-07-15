@@ -1,0 +1,20 @@
+{
+  "message": "Submission received",
+  "data": [
+    {
+      "rank": 1,
+      "degree_name": "Online Master of Science in Engineering Science – Software Engineering",
+      "reasoning": "This degree aligns perfectly with your interest in software development and enhances your programming skills, preparing you for leadership roles in the field."
+    },
+    {
+      "rank": 2,
+      "degree_name": "Online Master of Science in Information Technology (IT)",
+      "reasoning": "This degree will equip you with a broad range of IT skills, making it ideal for advancing your career in technology and software engineering."
+    },
+    {
+      "rank": 3,
+      "degree_name": "Online Master of Computer Science – Big Data Systems",
+      "reasoning": "This program focuses on big data and analytics, which complements your analytical thinking skills and interests in innovative technology solutions."
+    }
+  ]
+}
