@@ -6,7 +6,6 @@ from .serializers import QuestionaireSubmissionSerializer, QuestionSerializer, Q
 from .models import CareerQuizSubmissionModel, DegreeRecommendationSubmissionModel
 from lib.quiz import QuizClass
 from lib.degree_recommendation import DegreeRecommendation
-import json
 
 # Create your views here.
 
@@ -33,13 +32,8 @@ class CareerQuestionnaireApiView(APIView):
             career_quiz = serializer.validated_data['questions']
             user_response = serializer.validated_data['answers']
 
-            user_prompt_template, system_prompt_template = quiz.load_prompts()
-            user_prompt, system_prompt = quiz.format_prompts(
-                user_prompt_template, system_prompt_template, career_quiz, user_response)
-
-            raw_responze = quiz.llm(
-                user_prompt=user_prompt, system_prompt=system_prompt)
-            response = json.loads(raw_responze)
+            response = quiz.run_questionnaire(
+                questions=career_quiz, answers=user_response)
 
             # If the response includes a list of recommendations and reasoning
             if "career_recommendations" in response and "reasoning" in response:
