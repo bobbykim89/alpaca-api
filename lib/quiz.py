@@ -1,6 +1,5 @@
 import json
 from dotenv import load_dotenv
-import os
 from openai import OpenAI
 from pathlib import Path
 from collections import defaultdict
@@ -20,7 +19,7 @@ class QuizClass:
         project_root = current_file.parent.parent
         self.prompt_path = project_root / "lib" / "assets" / "prompts"
 
-    def llm(self, user_prompt: str, system_prompt: str, model="gpt-4o-mini", temperature=0.5):
+    def _llm(self, user_prompt: str, system_prompt: str, model="gpt-4o-mini", temperature=0.5):
         response = self.open_ai_client.chat.completions.create(
             model=model,
             messages=[
@@ -31,7 +30,7 @@ class QuizClass:
         )
         return response.choices[0].message.content
 
-    def load_prompts(self) -> tuple[str, str]:
+    def _load_prompts(self) -> tuple[str, str]:
         user_prompt_path = self.prompt_path / "user_prompt.txt"
         sys_prompt_path = self.prompt_path / "system_prompt.txt"
         with open(user_prompt_path, "r") as f:
@@ -40,16 +39,22 @@ class QuizClass:
             system_prompt = f.read()
         return user_prompt, system_prompt
 
-    def format_prompts(self, user_prompt: str, system_prompt: str, career_quiz, user_response):
+    def _format_prompts(self, career_quiz, user_response) -> tuple[str, str]:
+        user_prompt, system_prompt = self._load_prompts()
         context = defaultdict(str, {
             'user_response': json.dumps(user_response, indent=2),
             'career_quiz': json.dumps(career_quiz, indent=2),
         })
-        # qna_user_prompt = user_prompt.format(
-        #     user_response=json.dumps(user_response, indent=2))
-        # qna_system_prompt = system_prompt.format(
-        #     career_quiz=json.dumps(career_quiz, indent=2))
         qna_user_prompt = user_prompt.format_map(context)
         qna_system_prompt = system_prompt.format_map(context)
 
         return qna_user_prompt, qna_system_prompt
+
+    def run_questionnaire(self, questions, answers):
+        user_prompt, system_prompt = self._format_prompts(
+            career_quiz=questions, user_response=answers)
+        raw_responze = self._llm(
+            user_prompt=user_prompt, system_prompt=system_prompt)
+        response = json.loads(raw_responze)
+
+        return response
