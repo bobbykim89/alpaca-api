@@ -26,17 +26,15 @@ class CareerQuestionnaireApiView(APIView):
         #     "multiple_answers": False
         # })
         serializer = QuestionSerializer({
-            {
-                "id": 1,
-                "question": "What type of program are you most interested in right now?",
-                "options": [
-                    "Bachelor's degree",
-                    "Graduate degree (e.g., Master's or PhD)",
-                    "Certificate or short-term credential",
-                    "I'm just exploring for now"
-                ],
-                "multiple_answers": False
-            }
+            "id": 1,
+            "question": "What type of program are you most interested in right now?",
+            "options": [
+                "Bachelor's degree",
+                "Graduate degree (e.g., Master's or PhD)",
+                "Certificate or short-term credential",
+                "I'm just exploring for now"
+            ],
+            "multiple_answers": False
         })
         return Response(data=serializer.data, status=status.HTTP_200_OK)
 
