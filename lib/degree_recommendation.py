@@ -128,7 +128,7 @@ class DegreeRecommendation:
 
         # get top 5 hits for degrees
         hits = self._search(selected_career=selected_career,
-                            user_profile=user_profile, limit=8)
+                            user_profile=user_profile, limit=10)
 
         # format data
         recommended_degrees = self._format_hits_response(hits=hits)
