@@ -109,6 +109,7 @@ class DegreeRecommendation:
             degree_data["degree_title"] = hit.payload['degreeTitle']
             degree_data["careers"] = hit.payload['careers']
             degree_data["degree_description"] = hit.payload['shortDescription']
+            degree_data["score"] = hit.score
             recommended_degrees_data.append(degree_data)
 
         return json.dumps(recommended_degrees_data, indent=2)
@@ -127,7 +128,7 @@ class DegreeRecommendation:
 
         # get top 5 hits for degrees
         hits = self._search(selected_career=selected_career,
-                            user_profile=user_profile, limit=5)
+                            user_profile=user_profile, limit=6)
 
         # format data
         recommended_degrees = self._format_hits_response(hits=hits)
