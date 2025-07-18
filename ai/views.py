@@ -12,14 +12,27 @@ from lib.degree_recommendation import DegreeRecommendation
 
 class CareerQuestionnaireApiView(APIView):
     def get(self, request):
+        # serializer = QuestionSerializer({
+        #     "id": 1,
+        #     "question": "Where are you in your professional development?",
+        #     "options": [
+        #         "high school student",
+        #         "college student",
+        #         "graduate student",
+        #         "early-career professional",
+        #         "late career professional",
+        #         "lifelong learner"
+        #     ],
+        #     "multiple_answers": False
+        # })
         serializer = QuestionSerializer({
             "id": 1,
-            "question": "Where are you in your professional development?",
+            "question": "What type of program are you most interested in right now?",
             "options": [
-                "student",
-                "early-career professional",
-                "late career professional",
-                "lifelong learner"
+                "Bachelor's degree",
+                "Graduate degree (e.g., Master's or PhD)",
+                "Certificate or short-term credential",
+                "I'm just exploring for now"
             ],
             "multiple_answers": False
         })
