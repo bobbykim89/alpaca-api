@@ -16,7 +16,9 @@ class CareerQuestionnaireApiView(APIView):
             "id": 1,
             "question": "Where are you in your professional development?",
             "options": [
-                "student",
+                "high school student",
+                "college student",
+                "graduate student",
                 "early-career professional",
                 "late career professional",
                 "lifelong learner"
