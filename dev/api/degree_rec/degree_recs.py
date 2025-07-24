@@ -76,6 +76,7 @@ def format_hits_response(hits):
     for hit in hits.points:
         degree_data = {}
         degree_data["degree_title"] = hit.payload['degreeTitle']
+        degree_data["url"] = hit.payload['url']
         degree_data["careers"] = hit.payload['careers']
         degree_data["degree_description"] = hit.payload['shortDescription']
         recommended_degrees_data.append(degree_data)

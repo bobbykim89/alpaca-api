@@ -7,15 +7,18 @@ Return your answer in the following JSON format — do not include any extra tex
 [
     {
         "top_choice_1": "<Degree title>",
-        "reasoning": "<Concise explanation of why this degree fits the user's selected career>"
+        "reasoning": "<Concise explanation of why this degree fits the user's selected career>",
+        "url": "<url>"
     },
     {
         "top_choice_2": "<Degree title>",
-        "reasoning": "<Concise explanation of why this degree fits the user's selected career>"
+        "reasoning": "<Concise explanation of why this degree fits the user's selected career>",
+        "url": "<url>"
     },
     {
         "top_choice_3": "<Degree title>",
-        "reasoning": "<Concise explanation of why this degree fits the user's selected career>"
+        "reasoning": "<Concise explanation of why this degree fits the user's selected career>",
+        "url": "<url>"
     }
 ]
 
@@ -25,7 +28,8 @@ If you think that none of the degrees are a good fit for the user, then return t
 [
     {
         "top_choice_1": "NONE",
-        "reasoning": "<Concise explanation of why you think none of the degrees were a good fit.>"
+        "reasoning": "<Concise explanation of why you think none of the degrees were a good fit.>",
+        "url": "NONE"
     },
 
 ]
