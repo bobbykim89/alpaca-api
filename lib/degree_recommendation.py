@@ -109,6 +109,7 @@ class DegreeRecommendation:
             degree_data["degree_title"] = hit.payload['degreeTitle']
             degree_data["careers"] = hit.payload['careers']
             degree_data["degree_description"] = hit.payload['shortDescription']
+            degree_data["url"] = hit.payload['url']
             degree_data["score"] = hit.score
             recommended_degrees_data.append(degree_data)
 
