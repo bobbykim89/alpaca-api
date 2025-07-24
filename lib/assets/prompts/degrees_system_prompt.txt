@@ -15,18 +15,21 @@ Return your answer in the following JSON format — do not include any extra tex
         "rank": 1,
         "score": "<degree_data['score']>",
         "degree_name": "<Degree title>",
+        "url": "<degree_data['url']>",
         "reasoning": "<Concise explanation of why this degree fits the user's selected career>"
     },
     {
         "rank": 2,
         "score": "<degree_data['score']>",
         "degree_name": "<Degree title>",
+        "url": "<degree_data['url']>",
         "reasoning": "<Concise explanation of why this degree fits the user's selected career>"
     },
     {
         "rank": 3,
         "score": "<degree_data['score']>",
         "degree_name": "<Degree title>",
+        "url": "<degree_data['url']>",
         "reasoning": "<Concise explanation of why this degree fits the user's selected career>"
     }
 ]
