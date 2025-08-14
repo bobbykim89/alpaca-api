@@ -36,7 +36,7 @@ class DegreeRecommendation:
             "Content-Type": "application/json"
         }
         data = {
-            "model": "jina-embeddings-v2-small-en",
+            "model": "jina-embeddings-v3",
             "input": [text]
         }
         response = requests.post(
